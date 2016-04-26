@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423172136) do
+ActiveRecord::Schema.define(version: 20160426221542) do
 
   create_table "talks", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20160423172136) do
     t.time     "finish"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "slug"
   end
+
+  add_index "talks", ["slug"], name: "index_talks_on_slug", unique: true
 
 end

@@ -1,0 +1,5 @@
+<h4>
+        <%= I18n.l(talk.start, format: '%HH%M') %> -
+        <%= link_to(talk.title, talk_path(id: talk.slug)) %>
+</h4>
+<p><%= truncate(talk.description, length: 15) %></p>

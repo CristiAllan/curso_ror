@@ -3,9 +3,9 @@
             <div class="inner">
 
                 <!-- Logo -->
-                    <a href="<%=  %>" class="logo">
-                       <span class="symbol"><%= image_tag('logo.svg') %></span><span class="title">CursoRoR</span>
-                    </a>
+                    <%=  link_to(root_path, class: 'logo') do %>
+                       <span class="symbol"><%= image_tag('logo.svg') %></span><span class="title">Curso</span>
+                    <% end %>
 
                 <!-- Nav -->
                     <nav>

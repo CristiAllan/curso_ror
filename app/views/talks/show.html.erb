@@ -1,0 +1,5 @@
+<div class="inner">
+<h2><%= @talk.title %></h2>
+<p><%= @talk.description %></p>
+<p>De: <%= I18n.l(@talk.start, format: '%HH%M') %> até <%= I18n.l(@talk.finish, format: '%HH%M') %></p>
+</div>
