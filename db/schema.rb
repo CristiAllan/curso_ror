@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426221542) do
+ActiveRecord::Schema.define(version: 20160426234208) do
+
+  create_table "attendees", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "cpf"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "attendees", ["cpf"], name: "index_attendees_on_cpf", unique: true
+  add_index "attendees", ["email"], name: "index_attendees_on_email", unique: true
 
   create_table "talks", force: :cascade do |t|
     t.string   "title"
