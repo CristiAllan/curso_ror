@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426234208) do
+ActiveRecord::Schema.define(version: 20160428165006) do
 
   create_table "attendees", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20160426234208) do
   add_index "attendees", ["cpf"], name: "index_attendees_on_cpf", unique: true
   add_index "attendees", ["email"], name: "index_attendees_on_email", unique: true
 
+  create_table "speakers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "talks", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -33,8 +40,10 @@ ActiveRecord::Schema.define(version: 20160426234208) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "slug"
+    t.integer  "speaker_id"
   end
 
   add_index "talks", ["slug"], name: "index_talks_on_slug", unique: true
+  add_index "talks", ["speaker_id"], name: "index_talks_on_speaker_id"
 
 end

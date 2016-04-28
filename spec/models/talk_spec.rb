@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Talk, type: :model do
+    describe 'assossiation' do
+        it { should belong_to(:speaker) }
+    end
+
     describe 'validations' do
 
         it { should validate_presence_of(:title) }

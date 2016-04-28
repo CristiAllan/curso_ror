@@ -1,5 +1,10 @@
 <div class="inner">
+<img src="<%= gravatar_url(@talk.speaker.email) %>" alt="<%= @talk.speaker.name %>">
 <h2><%= @talk.title %></h2>
+
+<% if @talk.speaker.present? %>
+    <p>Por: <%= @talk.speaker.name %></p>
+<% end %>
 <p><%= @talk.description %></p>
 <p>De: <%= I18n.l(@talk.start, format: '%HH%M') %> até <%= I18n.l(@talk.finish, format: '%HH%M') %></p>
 </div>
