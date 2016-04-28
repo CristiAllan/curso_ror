@@ -2,7 +2,11 @@
 <html lang="pt-BR">
 <html>
     <head>
-        <title>Curso RoR Cristi Allan</title>
+        <% if @title.present? %>
+            <title><%= @title %> - Curso RoR</title>
+        <% else %>
+                <title>Curso RoR</title>
+        <% end %>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 

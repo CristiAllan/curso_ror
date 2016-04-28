@@ -1,6 +1,7 @@
 class AttendeesController < ApplicationController
     def new
         @attendee = Attendee.new
+        @title = 'Inscreva-se'
     end
 
     def create
