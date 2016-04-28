@@ -21,6 +21,7 @@ end
 
 group :development do
       gem 'pry-rails'
+      gem "letter_opener"
 end
 
 group :test do
