@@ -1,22 +1,24 @@
 <div class="inner">
     <h3>Inscreva-se no nosso evento</h3>
-    <%= form_for(@attendee) do |f| %>
-            <div class="field">
-                <%= f.text_field :name, placeholder: 'Digite seu nome' %>
-            </div>
 
-            <div class="field">
-                <%= f.text_field :email, placeholder: 'Digite seu e-mail' %>
-            </div>
+<!--Criação de form com simple_form-->
 
-            <div class="field">
-                <%= f.text_field :cpf, placeholder: 'Digite seu CPF' %>
-            </div>
+    <%= simple_form_for (@attendee) do |f| %>
+        <div class="field">
+            <%= f.input :name, placeholder: 'Digite seu nome', label: false %>
+        </div>
 
-            <div class="field">
-                <%= f.phone_field :phone, placeholder: 'Digite seu Telefone' %>
-            </div>
+        <div class="field">
+            <%= f.input :email, placeholder: 'Digite seu e-mail', label: false %>
+        </div>
 
-            <%= f.submit 'Enviar' %>
-    <% end%>
-</div>
+        <div class="field">
+            <%= f.input :cpf, placeholder: 'Digite seu CPF', label: false %>
+        </div>
+
+        <div class="field">
+            <%= f.input :phone, placeholder: 'Digite seu Telefone', label: false %>
+        </div>
+
+        <%= f.button :submit, 'Enviar' %>
+    <% end %>
