@@ -1,6 +1,7 @@
 <div class="inner">
 <img src="<%= gravatar_url(@talk.speaker.email) %>" alt="<%= @talk.speaker.name %>">
 <h2><%= @talk.title %></h2>
+<%= image_tag @talk.image.thumb('320x320#').url %>
 
 <% if @talk.speaker.present? %>
     <p>Por: <%= @talk.speaker.name %></p>

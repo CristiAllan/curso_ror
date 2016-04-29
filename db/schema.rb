@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160429143221) do
+ActiveRecord::Schema.define(version: 20160429222545) do
 
   create_table "attendees", force: :cascade do |t|
     t.string   "name"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20160429143221) do
     t.datetime "updated_at",  null: false
     t.string   "slug"
     t.integer  "speaker_id"
+    t.string   "image_uid"
+    t.string   "image_name"
   end
 
   add_index "talks", ["slug"], name: "index_talks_on_slug", unique: true

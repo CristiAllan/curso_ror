@@ -1,6 +1,11 @@
 <article class="style<%= rand(1..6) %>">
     <span class="image">
-        <img src="<%= gravatar_url(talk.speaker.email) %>?s=320">
+
+        <% if talk.image_stored? %>
+            <%= image_tag talk.image.thumb('320x320#').url %>
+        <% else %>
+            <img src="<%= gravatar_url(talk.speaker.email) %>?s=320">
+        <% end %>
     </span>
 
         <%= link_to talk_path(id: talk.slug) do %>
