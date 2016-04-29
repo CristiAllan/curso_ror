@@ -12,9 +12,6 @@ class AttendeesController < ApplicationController
         else
             render :new
         end
-
-
-
     end
 
     private

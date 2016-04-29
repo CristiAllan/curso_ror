@@ -1,0 +1,26 @@
+<div class="inner">
+    <h3>Cadastro de palestra</h3>
+
+<!--Criação de form com simple_form-->
+
+    <%= simple_form_for(@talk) do |f| %>
+        <div class="field">
+            <%= f.input :title, placeholder: 'Digite o titulo da palestra', label: false %>
+        </div>
+
+        <div class="field">
+            <%= f.input :description, as: :text, placeholder: 'Digite a descrição', label: false %>
+        </div>
+
+        <div class="field">
+            <%= f.input :start,  label: false %>
+            até:
+            <%= f.input :finish, label: false %>
+        </div>
+
+        <div class="field">
+            <%= f.association :speaker, include_blank: 'Escolha um Palestrante', collection: @speakers, label: false %>
+        </div>
+
+        <%= f.button :submit, 'Enviar' %>
+    <% end %>

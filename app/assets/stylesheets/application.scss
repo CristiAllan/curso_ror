@@ -86,3 +86,11 @@
         color: white;
     }
 }
+
+.input.time {
+    display: inline-block;
+    margin: left;
+    select { width: 50px; display: inline-block }
+}
+
+#talk_speaker_id {width: 400px;}
