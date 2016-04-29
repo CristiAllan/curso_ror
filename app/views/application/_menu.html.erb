@@ -5,5 +5,8 @@
                             <li><%= link_to('Palestras', root_path) %></li>
                             <li><%= link_to('Inscreva-se', new_attendee_path) %></li>
                             <li><%= link_to('Contato', new_contact_path) %></li>
+                            <% if false && user_signed_in? %>
+                                <li><%= link_to('Log Out', destroy_user_session_path, method: :delete) %></li>
+                            <% end %>
                         </ul>
                     </nav>
