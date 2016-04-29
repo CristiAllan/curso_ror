@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
    resources :attendees, path: 'inscritos', only: [:create, :new]
 
+   resources :contacts, path: 'Contato', only: [:new, :create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

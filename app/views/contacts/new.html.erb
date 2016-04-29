@@ -1,9 +1,8 @@
 <div class="inner">
-    <h3>Inscreva-se no nosso evento</h3>
+    <h3>Contato</h3>
+    <p>Envie sua mensagem</p>
 
-<!--Criação de form com simple_form-->
-
-    <%= simple_form_for(@attendee) do |f| %>
+    <%= simple_form_for(:contact, url: contacts_path) do |f| %>
         <div class="field">
             <%= f.input :name, placeholder: 'Digite seu nome', label: false %>
         </div>
@@ -13,12 +12,9 @@
         </div>
 
         <div class="field">
-            <%= f.input :cpf, placeholder: 'Digite seu CPF', label: false %>
-        </div>
-
-        <div class="field">
-            <%= f.input :phone, placeholder: 'Digite seu Telefone', label: false %>
+            <%= f.input :message, as: :text, placeholder: 'Digite sua mensagem', label: false %>
         </div>
 
         <%= f.button :submit, 'Enviar' %>
     <% end %>
+
