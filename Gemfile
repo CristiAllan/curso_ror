@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
+gem "administrate", "~> 0.2.0"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
