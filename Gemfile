@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'devise'
 gem "administrate", "~> 0.2.0"
 gem 'dragonfly'
+gem 'administrate-field-image'
+gem 'pundit'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
